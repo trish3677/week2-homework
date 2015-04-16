@@ -1,0 +1,26 @@
+<h1> Dice Game </h1>
+
+<img src="http://jeffcohenonline.com/dice/<%= @num1 %>.png">
+<img src="http://jeffcohenonline.com/dice/<%= @num2 %>.png">
+
+
+<h2>You rolled: <%= @tot %> </h2>
+<h2>Your goal number is: <%= $yournumber %> </h2>
+
+<% if @tot == 7 %>
+	<form action= "/dice">
+  		<button>You Lose. Click to play again.</button>
+			</form> 
+<%end%>
+
+<%if $yournumber == @tot %>
+	<form action= "/dice">
+  		<button>You Win! Click to play again.</button>
+			</form> 
+<%end%>
+
+<%if $yournumber != @tot && @tot != 7  %>
+	<form action= "/dice/rollagain">
+  		<button>Click to roll again.</button>
+			</form> 
+<%end%>

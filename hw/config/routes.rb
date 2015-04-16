@@ -7,6 +7,8 @@ Rails.application.routes.draw do
  get '/rps/winrps' => 'rps#winrps'
  get '/dice' => 'dice#info'
  get '/dice/game' => 'dice#play'
+ get 'dice/game' => 'dice#determineplay'
+ get 'dice/rollagain' =>'dice#rollagain'
 
 end
  

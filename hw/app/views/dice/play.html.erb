@@ -3,4 +3,34 @@
 <img src="http://jeffcohenonline.com/dice/<%= @number1 %>.png">
 <img src="http://jeffcohenonline.com/dice/<%= @number2 %>.png">
 
-<h2>You rolled a: <%= @total %> </h2>
+
+<h2>You rolled: <%= @total %> </h2>
+
+<% if @total == 7  || @total == 11%>
+		<form action= "/dice">
+  			<button>You Win! Click to play again.</button>
+				</form> 
+<%end%>
+
+<%if @total == 2 || @total == 3 || @total == 12 %>
+		<form action= "/dice">
+  			<button>You Lose. Click to play again.</button>
+				</form>
+<%end%>
+
+<%if  @total != 7  && @total != 11 && @total != 2 && @total != 3 && @total != 12%>
+	<% $yournumber = @total %>
+		<form action= "/dice/rollagain">
+  			<button> Click to roll again!</button>
+				</form>
+<%end%>
+
+
+
+
+
+
+
+
+
+
