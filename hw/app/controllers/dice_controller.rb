@@ -1,3 +1,5 @@
+#patricia corvino
+
 class DiceController < ApplicationController
 
 	$yournumber = 0

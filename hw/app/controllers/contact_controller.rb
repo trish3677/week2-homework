@@ -1,3 +1,5 @@
+#patricia corvino
+
 class ContactController < ApplicationController
 
 	def submit
